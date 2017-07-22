@@ -5,13 +5,10 @@ var ReactRouter = require('react-router-dom');
 
 
 
-//var queryString = require('query-string');
 
 
 class WeatherInput extends React.Component {
     constructor(props){
-        
-        console.log(props)
         super(props);
         this.state = {
             city: ''
@@ -59,9 +56,9 @@ class WeatherInput extends React.Component {
     }
 }
 
-// WeatherInput.PropTypes = {
-//     direction: PropTypes.string.isRequired
-// }
+WeatherInput.PropTypes = {
+    direction: PropTypes.string.isRequired
+}
 
 WeatherInput.defaultProps = {
     direction: 'column'

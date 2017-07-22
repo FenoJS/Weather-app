@@ -8,7 +8,6 @@ var DayItem = require('./DayItem');
 class Forecast extends React.Component {
     constructor(props){
         super(props);
-        console.log(props)
             this.state = {
                 data: '',
                 loading: true
@@ -30,11 +29,11 @@ class Forecast extends React.Component {
 
 
 
-    handleClick(city){
-       city.city = this.city
+    handleClick(dayData){
+       dayData.city = this.city
        this.props.history.push({
            pathname: '/details/' + this.city,
-           state: city
+           state: dayData
        })
     }
 
@@ -77,9 +76,8 @@ class Forecast extends React.Component {
   
      
 
-//<h1 className='forecast-header'>{this.city}</h1>
+
     render(){
-        console.log(this.state)
         return (
             this.state.loading === true ? <h1 > Loading </h1> :
              
