@@ -64,25 +64,25 @@ var monthsMapEn = {
 };
 
 var monthsMapPl = {
-  "0":"01.",
-  "1":"02.",
-  "2":"03.",
-  "3":"04.",
-  "4":"05.",
-  "5":"06.",
-  "6":"07.",
-  "7":"08.",
-  "8":"09.",
-  "9":"10.",
-  "10":"11.",
-  "11":"12."
+  "0":".01",
+  "1":".02",
+  "2":".03",
+  "3":".04",
+  "4":".05",
+  "5":".06",
+  "6":".07",
+  "7":".08",
+  "8":".09",
+  "9":".10",
+  "10":".11",
+  "11":".12"
 };
 
 
 function convertDate(unixTime){
     var date = new Date(unixTime * 1000);
     var day = dayMapPl[date.getDay()];
-    var month = monthsMapPl[date.getMonth()] + date.getDate()
+    var month = date.getDate() + monthsMapPl[date.getMonth()];
     return day + ', ' + month
      
 
